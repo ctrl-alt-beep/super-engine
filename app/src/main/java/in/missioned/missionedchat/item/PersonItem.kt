@@ -1,12 +1,13 @@
 package `in`.missioned.missionedchat.item
 
 import `in`.missioned.missionedchat.R
+import `in`.missioned.missionedchat.glide.GlideApp
 import `in`.missioned.missionedchat.model.User
 import `in`.missioned.missionedchat.util.StorageUtil
 import android.content.Context
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
-import glide.GlideApp
+//import glide.GlideApp
 import kotlinx.android.synthetic.main.item_person.*
 import kotlinx.android.synthetic.main.item_person.view.*
 import kotlinx.android.synthetic.main.item_person.view.textView_name

@@ -2,6 +2,7 @@ package `in`.missioned.missionedchat.ui.my_account
 
 import `in`.missioned.missionedchat.R
 import `in`.missioned.missionedchat.SignInActivity
+import `in`.missioned.missionedchat.glide.GlideApp
 import `in`.missioned.missionedchat.util.FirestoreUtil
 import `in`.missioned.missionedchat.util.StorageUtil
 import android.app.Activity
@@ -24,7 +25,7 @@ import androidx.ui.foundation.Clickable
 import androidx.ui.foundation.Text
 import com.bumptech.glide.Glide
 import com.firebase.ui.auth.AuthUI
-import glide.GlideApp
+//import glide.GlideApp
 import kotlinx.android.synthetic.main.fragment_my_account.*
 import kotlinx.android.synthetic.main.fragment_my_account.view.*
 import kotlinx.android.synthetic.main.fragment_my_account.view.name_input

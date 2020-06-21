@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MissionEd Chat</string>
+    <string name="title_people">People</string>
+    <string name="title_myaccount">My Account</string>
+    <string name="my_bio">My Bio</string>
+    <string name="my_name">My Name</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="save">SAVE</string>
+    <!--<string name="title_notifications">Notifications</string>-->
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "428172876341",
+    "firebase_url": "https://missioned-chat.firebaseio.com",
+    "project_id": "missioned-chat",
+    "storage_bucket": "missioned-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428172876341:android:7eba88830c1edd19c52f7c",
+        "android_client_info": {
+          "package_name": "in.missioned.missionedchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428172876341-nvscuohuorqe7vo5oenggtivr7p5n4ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4xkIvI6V6RIGhrvSGWt9FDM72y_ehCVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428172876341-nvscuohuorqe7vo5oenggtivr7p5n4ac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

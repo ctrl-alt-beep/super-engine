@@ -1,8 +1,13 @@
 package `in`.missioned.missionedchat.ui.people
 
+import `in`.missioned.missionedchat.AppConstants
+import `in`.missioned.missionedchat.ChatActivity
 import `in`.missioned.missionedchat.R
+import `in`.missioned.missionedchat.ui.recyclerView.PersonItem
 import `in`.missioned.missionedchat.util.FirestoreUtil
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +16,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.ListenerRegistration
 import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.OnItemClickListener
 import com.xwray.groupie.Section
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
@@ -54,17 +60,28 @@ class PeopleFragment : Fragment() {
                 adapter = GroupAdapter<GroupieViewHolder>().apply {
                     peopleSection = Section(items)
                     add(peopleSection)
+                    setOnItemClickListener(onItemClick)
                 }
             }
             shouldInitRecyclerView = false
         }
 
-        fun updateItems() {}
+        fun updateItems() = peopleSection.update(items)
 
         if (shouldInitRecyclerView) {
             init()
         } else {
             updateItems()
+        }
+    }
+
+    private val onItemClick = OnItemClickListener { item, _ ->
+        if (item is PersonItem) {
+            Log.d("onItemClick", item.toString())
+            val intent = Intent(activity, ChatActivity::class.java)
+            intent.putExtra(AppConstants.USER_NAME, item.person.name)
+            intent.putExtra(AppConstants.USER_ID, item.userId)
+            startActivity(intent)
         }
     }
 }

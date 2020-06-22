@@ -69,6 +69,8 @@ dependencies {
     implementation "com.firebaseui:firebase-ui-auth:$firebaseui_version"
     implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
     implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
+    implementation 'com.google.firebase:firebase-messaging:20.2.1'
+
 
 
     //glide

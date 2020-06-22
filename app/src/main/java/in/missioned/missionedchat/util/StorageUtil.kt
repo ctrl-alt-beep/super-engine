@@ -1,5 +1,6 @@
 package `in`.missioned.missionedchat.util
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -19,6 +20,15 @@ object StorageUtil {
     fun uploadProfilePhoto(imageBytes: ByteArray,
     onSuccess: (imagePath: String) -> Unit) {
         val ref = currentUserRef.child("profilePictures/${UUID.nameUUIDFromBytes(imageBytes)}")
+        ref.putBytes(imageBytes)
+            .addOnSuccessListener {
+                onSuccess(ref.path)
+            }
+    }
+
+    fun uploadMessageImage(imageBytes: ByteArray,
+                           onSuccess: (imagePath: String) -> Unit) {
+        val ref = currentUserRef.child("messages/${UUID.nameUUIDFromBytes(imageBytes)}")
         ref.putBytes(imageBytes)
             .addOnSuccessListener {
                 onSuccess(ref.path)
